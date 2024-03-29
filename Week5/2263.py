@@ -14,7 +14,7 @@ def preorder(inStart, inEnd, postStart, postEnd):
     if (inStart > inEnd) or (postStart > postEnd):
         return
     
-    root = postorder[postEnd]
+    root = postorder[postEnd] # 2
     print(root, end = " ")
     
     leftNode = inorder_index[root] - inStart
@@ -24,3 +24,7 @@ def preorder(inStart, inEnd, postStart, postEnd):
     preorder(inEnd - rightNode + 1, inEnd, postEnd - rightNode, postEnd - 1)
 
 preorder(0, n - 1, 0, n - 1)
+
+# 10
+# 4 2 5 1 6 3 7 10 8 9
+# 4 5 2 6 10 9 8 7 3 1
